@@ -1,4 +1,4 @@
-meteor phoneformat.js
+meteor phoneformat.js [![Build Status](https://travis-ci.org/DispatchMe/phoneformat.js.svg)](https://travis-ci.org/DispatchMe/phoneformat.js)
 ==============
 
 Javascript phone number formatter for meteor.

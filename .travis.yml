@@ -1,0 +1,16 @@
+# This is how you tell travis to run the build on the new container (docker) based infrastructure
+sudo: false
+
+language: node_js
+node_js:
+  - "v0.12.4"
+
+# Since sudo isn't possible anymore (for now), meteor can't add a link to itself to /usr/local/bin, so you'll have to add the meteor installation folder to the PATH yourself.
+before_install:
+  - "curl https://install.meteor.com | /bin/sh"
+  - export PATH="$HOME/.meteor:$PATH"
+  - "npm install -g velocity-cli"
+  - "npm list -g"
+
+script:
+  - "velocity test-package ./ --ci"

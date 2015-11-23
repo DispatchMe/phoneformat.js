@@ -41,3 +41,21 @@ Package.onUse(function (api) {
 Cordova.depends({
   'cordova-plugin-globalization': '1.0.1'
 });
+
+Package.onTest(function (api) {
+  api.use('sanjo:jasmine@0.18.0');
+
+  api.use([
+    'templating',
+    'velocity:core@0.9.3',
+    'dispatch:view-extensions',
+    'dispatch:timeout',
+    'dispatch:phoneformat.js'
+  ], 'web');
+
+  api.addFiles([
+    'tests/helpers.js',
+    'tests/prepare.html',
+    'tests/phone_format.js'
+  ], 'web');
+});
