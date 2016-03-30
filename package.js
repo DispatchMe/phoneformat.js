@@ -20,7 +20,7 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'google.phoneformat.js',
-    'phoneformat.js',
+    'PhoneFormat.js',
     'country_code_map.js',
     'components/single-input/single_input.html',
     'components/single-input/single_input.js',
